@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./certifications.css";
+import "./Certifications.css";
 import Mern from "../assets/certs/Mern_cert.jpg";
 import AZ900 from "../assets/certs/AZ900_cert.jpeg";
 import Leader from "../assets/certs/Leader_cert.jpg";
