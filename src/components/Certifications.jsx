@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import "./certifications.css";
+import Mern from "../assets/certs/Mern_cert.jpg";
+import AZ900 from "../assets/certs/AZ900_cert.jpeg";
+import Leader from "../assets/certs/Leader_cert.jpg";
+import Tcsion from "../assets/certs/Tcsion_cert.jpeg";
+
 export default function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
 
@@ -8,26 +13,26 @@ export default function Certifications() {
       title: "Full Stack Web Development With Mern",
       issuer: "Udemy",
       year: "2025",
-      image: "/certs/Mern_cert.jpg",
+      image: Mern,
     },
     {
       title: "Microsoft Azure Fundamentals (AZ-900)",
       issuer: "Microsoft",
       year: "2024",
-      image: "/certs/AZ900_cert.jpeg",
+      image:AZ900,
     },
    
     {
       title: "Being a Leader and Effective Exercise",
       issuer: "IICMR Pune",
       year: "2024",
-      image: "/certs/Leader_cert.jpg",
+      image: Leader,
     }, 
     {
       title: "TCS iON Career Edge - Young Professional",
       issuer: "TCS iON",
       year: "2023",
-      image: "/certs/Tcsion_cert.jpeg",
+      image: Tcsion,
     },
   ];
 

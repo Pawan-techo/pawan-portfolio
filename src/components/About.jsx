@@ -5,7 +5,10 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import pic1 from "../assets/profile/pic-1.png";
+import pic2 from "../assets/profile/pic-2.jpeg";
+import pic3 from "../assets/profile/pic-3.jpeg";
+import pic4 from "../assets/profile/pic-4.jpg";
 export default function AboutMe() {
   return (
     <section className="about-section" id="about">
@@ -24,16 +27,16 @@ export default function AboutMe() {
             className="about-swiper"
           >
             <SwiperSlide>
-              <img src="/profile/pic-1.png" alt="Profile 1" />
+              <img src= {pic1} alt="Profile 1" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/profile/pic-2.jpeg" alt="Profile 2" />
+              <img src= {pic2} alt="Profile 2" />
             </SwiperSlide>
              <SwiperSlide>
-              <img src="/profile/pic-4.jpeg" alt="Profile 4" />
+              <img src= {pic4} alt="Profile 4" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/profile/pic-3.jpeg" alt="Profile 3" />
+              <img src= {pic3} alt="Profile 3" />
             </SwiperSlide>
           </Swiper>
         </div>
