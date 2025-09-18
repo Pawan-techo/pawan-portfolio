@@ -1,0 +1,196 @@
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(
+      1200px 800px at 15% -10%,
+      rgba(100, 149, 237, 0.15), 
+      transparent 70%
+    ),
+    radial-gradient(
+      1000px 700px at 110% 110%,
+      rgba(186, 85, 211, 0.12), 
+      transparent 70%
+    ),
+    linear-gradient(135deg, #0f111a 0%, #0a0a0a 100%);
+}
+
+/* Background orbs - soft UX-friendly colors */
+.bg-orbs {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(100, 149, 237, 0.1),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(186, 85, 211, 0.1),
+      transparent 45%
+    );
+  filter: blur(60px);
+  animation: drift 20s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+.bg-orbs--2 {
+  animation-duration: 28s;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(-2%, -2%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(2%, 2%, 0) scale(1.05);
+  }
+}
+
+.hero-card {
+  position: relative;
+  width: min(92vw, 820px);
+  padding: 48px 28px 56px;
+  border-radius: 28px;
+  background: rgba(20, 20, 30, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 20px rgba(100, 149, 237, 0.2);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 300ms ease, box-shadow 300ms ease, background 300ms ease;
+}
+.hero-card:hover {
+  box-shadow: 0 0 50px rgba(100, 149, 237, 0.25),
+    0 30px 70px rgba(0, 0, 0, 0.5);
+  background: rgba(25, 25, 35, 0.6);
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 18px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.05),
+    0 15px 35px rgba(100, 149, 237, 0.35);
+  transform: translateZ(40px) translate(var(--tx, 0), var(--ty, 0));
+  transition: transform 200ms ease;
+  max-width: 180px;
+  height: auto;
+}
+.hero-card img {
+  width: 100%;
+  height: 250px;   
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.title {
+  margin: 4px 0 8px;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  color: #f0f0f0;
+  letter-spacing: 0.5px;
+  transform: translateZ(30px);
+}
+.gradient-text {
+  background: linear-gradient(90deg, #4f93ce, #6b5dcf, #3ec6c1); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.25), 
+    0 0 10px rgba(78, 147, 206, 0.2); 
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitle */
+.subtitle {
+  margin: 6px 0 18px;
+  font-size: clamp(14px, 2.5vw, 20px);
+  color: #c8c8c8;
+  transform: translateZ(20px);
+  min-height: 28px;
+}
+
+/* CTA button */
+.cta {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 28px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #4f93ce;
+  border-radius: 12px;
+
+  border: 2px solid #4f93ce;
+  background: transparent;
+  box-shadow: 0 0 8px rgba(79, 147, 206, 0.4);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.cta:hover {
+  color: #fff;
+  background-color: #4f93ce;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(79, 147, 206, 0.6);
+}
+
+
+.float {
+  position: absolute;
+  filter: blur(2px);
+  opacity: 0.3;
+  pointer-events: none;
+  transform: translateZ(10px);
+}
+.shape-1 {
+  top: -15px;
+  left: -15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #6495ed, rgba(100, 149, 237, 0.15));
+  box-shadow: 0 8px 25px rgba(100, 149, 237, 0.35);
+  animation: bob 6s ease-in-out infinite;
+}
+.shape-2 {
+  bottom: -20px;
+  right: -20px;
+  width: 110px;
+  height: 110px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, #ba55d3, rgba(186, 85, 211, 0.15));
+  box-shadow: 0 8px 35px rgba(186, 85, 211, 0.35);
+  animation: bob 8s ease-in-out infinite reverse;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateZ(10px) translateY(0);
+  }
+  50% {
+    transform: translateZ(10px) translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-orbs,
+  .shape-1,
+  .shape-2 {
+    animation: none !important;
+  }
+  .hero-card {
+    transition: none;
+  }
+}

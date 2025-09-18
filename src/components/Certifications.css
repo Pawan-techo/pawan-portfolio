@@ -1,0 +1,124 @@
+.certifications-section {
+  padding: 60px 20px;
+  background: #121217; 
+  text-align: center;
+}
+
+.certifications-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Responsive Grid */
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cert-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.cert-image:hover {
+  transform: scale(1.05);
+}
+
+.cert-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #38bdf8; 
+}
+
+.cert-issuer {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.cert-year {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+/* Modal styles */
+/* Modal background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal content */
+.modal-content {
+  max-width: 1200px;   
+  width: 90%;         
+  max-height: 90vh;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image inside modal */
+.modal-content img {
+  width: 100%;        
+  height: auto;       
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+
+
+@media (max-width: 1024px) {
+  .certifications-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .certifications-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cert-image {
+    height: 160px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .certifications-container {
+    grid-template-columns: 1fr;
+  }
+  .cert-image {
+    height: 140px;
+  }
+}
