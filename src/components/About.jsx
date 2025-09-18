@@ -30,7 +30,7 @@ export default function AboutMe() {
               <img src="/profile/pic-2.jpeg" alt="Profile 2" />
             </SwiperSlide>
              <SwiperSlide>
-              <img src="/profile/pic-4.jpg" alt="Profile 4" />
+              <img src="/profile/pic-4.jpeg" alt="Profile 4" />
             </SwiperSlide>
             <SwiperSlide>
               <img src="/profile/pic-3.jpeg" alt="Profile 3" />
