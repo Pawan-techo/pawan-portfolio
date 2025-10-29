@@ -3,7 +3,7 @@ import profile from "../assets/profile.jpg";
 import easetour from "../assets/projects/Easetour.png";
 import weatherxpert from "../assets/projects/weatherxpert.png";
 import cbp from "../assets/projects/cbp.png";
-import InsightBlogs from "../assets/projects/InsightBlogs.png";
+import insightblogs from "../assets/projects/InsightBlogs.png";
 import "./Project.css";
 export default function Projects() {
 const projects = [
@@ -19,13 +19,13 @@ const projects = [
     description:
       "A Blogging WebApp developed with React.js, Node.js, Mangodb, HTML, and CSS to add, edit, and delete Blogs.",
     link: "https://insight-blogs.vercel.app/",
-    image: InsightBlogs,
+    image: insightblogs,
   },
   {
     title: "WeatherXpert",
     description:
       "Real-time weather application using Node.js, Express.js, HTML, and CSS with WeatherAPI integration.",
-    link: "#",
+    link: "https://weatherxpert.onrender.com",
     image: weatherxpert,
   },
   {
