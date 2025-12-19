@@ -1,60 +1,88 @@
 import React from "react";
-import profile from "../assets/profile.jpg"; 
 import easetour from "../assets/projects/Easetour.png";
 import weatherxpert from "../assets/projects/weatherxpert.png";
-import cbp from "../assets/projects/cbp.png";
 import insightblogs from "../assets/projects/InsightBlogs.png";
+import stylewear from "../assets/projects/stylewear.png";
 import "./Project.css";
+
 export default function Projects() {
-const projects = [
-  {
-    title: "EaseTour - Tourism System",
-    description:
-      "Tourism management system with booking, package, and place management built using PHP, HTML, CSS, and MySQL.",
-    link: "#",
-    image: easetour,
-  },
-  {
-    title: "InsightBlogs",
-    description:
-      "A Blogging WebApp developed with React.js, Node.js, Mangodb, HTML, and CSS to add, edit, and delete Blogs.",
-    link: "https://insight-blogs.vercel.app/",
-    image: insightblogs,
-  },
-  {
-    title: "WeatherXpert",
-    description:
-      "Real-time weather application using Node.js, Express.js, HTML, and CSS with WeatherAPI integration.",
-    link: "https://weatherxpert.onrender.com",
-    image: weatherxpert,
-  },
-  {
-    title: "Calorie Burn Predictor",
-    description:
-      "AI/ML-based system built with Python and Flask to predict calories burned from user health and exercise data.",
-    link: "#",
-    image: cbp,
-  },
-];
+  const projects = [
+    {
+      title: "StyleWear – E-Commerce Web App",
+      description:
+        "A full-stack MERN e-commerce platform with authentication, product management, cart, order flow, and admin dashboard.",
+      live: "https://stylewear.vercel.app",
+      github: "https://github.com/Pawan-techo/StyleWear",
+      image: stylewear,
+      latest: true,
+    },
+    {
+      title: "InsightBlogs",
+      description:
+        "A blogging web application built with React, Node.js, and MongoDB featuring CRUD operations and authentication.",
+      live: "https://insight-blogs.vercel.app/",
+      github: "#",
+      image: insightblogs,
+    },
+    {
+      title: "EaseTour – Tourism Management System",
+      description:
+        "Tourism system with package booking, admin panel, OTP verification, and MySQL database integration.",
+      live: "#",
+      github: "#",
+      image: easetour,
+    },
 
-
+    {
+      title: "WeatherXpert",
+      description:
+        "Real-time weather app using Node.js, Express, and Weather API with clean UI and live data rendering.",
+      live: "https://weatherxpert.onrender.com",
+      github: "https://github.com/yourusername/weatherxpert",
+      image: weatherxpert,
+    },
+  ];
 
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">My Projects</h2>
+      <h2 className="projects-title">Projects</h2>
+
       <div className="projects-container">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-img"
-            />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} className="btn-primary">
-              View Project
-            </a>
+            <div className="project-img-wrapper">
+              {project.latest && <span className="latest-badge">LATEST & HOT</span>}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-img"
+              />
+            </div>
+
+            <div className="project-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+
+              <div className="project-buttons">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn live-btn"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn github-btn"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
           </div>
         ))}
       </div>
