@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import "./contact.css";
+import "./Contact.css";
 export default function Contact() {
   
   const [formData, setFormData] = useState({
