@@ -8,7 +8,6 @@ import Skills from "../components/Skills.jsx"
 import Certifications from "../components/Certifications.jsx";
 import Footer from "../components/Footer.jsx";
 import "./home.css";
-import Journey from "../components/Journey.jsx";
 
 export default function Home() {
  
@@ -23,9 +22,6 @@ export default function Home() {
       </section>
       <section id="About">
       <About/>
-      </section>
-      <section id="Journey">
-      <Journey/>
       </section>
       <section id="Projects">
       <Projects/>
