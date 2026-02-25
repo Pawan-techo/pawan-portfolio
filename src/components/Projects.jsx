@@ -1,20 +1,28 @@
 import React from "react";
 import easetour from "../assets/projects/Easetour.png";
-import weatherxpert from "../assets/projects/weatherxpert.png";
 import insightblogs from "../assets/projects/InsightBlogs.png";
 import stylewear from "../assets/projects/stylewear.png";
+import rentlordiq from "../assets/projects/rentlord.png";
 import "./Project.css";
 
 export default function Projects() {
   const projects = [
+    {
+      title: "RentLord.iQ – SaaS Rental Management System",
+      description:
+        "A SaaS-based rental management system built with the MERN stack, enabling property management, rent tracking, tenant onboarding, and maintenance automation.",
+      live: "https://rentlordiq.vercel.app",
+      github: "https://github.com/Pawan-techo/RentLord.IQ",
+      image: rentlordiq,
+      latest: true,
+    },
     {
       title: "StyleWear – E-Commerce Web App",
       description:
         "A full-stack MERN e-commerce platform with authentication, product management, cart, order flow, and admin dashboard.",
       live: "https://stylewear.vercel.app",
       github: "https://github.com/Pawan-techo/StyleWear",
-      image: stylewear,
-      latest: true,
+      image: stylewear,add
     },
     {
       title: "InsightBlogs",
@@ -32,15 +40,6 @@ export default function Projects() {
       github: "#",
       image: easetour,
     },
-
-    {
-      title: "WeatherXpert",
-      description:
-        "Real-time weather app using Node.js, Express, and Weather API with clean UI and live data rendering.",
-      live: "https://weatherxpert.onrender.com",
-      github: "https://github.com/yourusername/weatherxpert",
-      image: weatherxpert,
-    },
   ];
 
   return (
@@ -51,7 +50,9 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
             <div className="project-img-wrapper">
-              {project.latest && <span className="latest-badge">LATEST & HOT</span>}
+              {project.latest && (
+                <span className="latest-badge">LATEST & HOT</span>
+              )}
               <img
                 src={project.image}
                 alt={project.title}
