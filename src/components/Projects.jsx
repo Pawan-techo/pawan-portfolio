@@ -22,7 +22,7 @@ export default function Projects() {
         "A full-stack MERN e-commerce platform with authentication, product management, cart, order flow, and admin dashboard.",
       live: "https://stylewear.vercel.app",
       github: "https://github.com/Pawan-techo/StyleWear",
-      image: stylewear,add
+      image: stylewear,
     },
     {
       title: "InsightBlogs",
